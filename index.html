@@ -19,6 +19,47 @@
   </head>
 
   <body>
+    <!--title bar with 3 nav links-->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">For The Love of Food</h1>
+        <p class="lead">Feeling Hungry? Searching for Recipes</p>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Advanced Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Team</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--DIV for top image container-->
+    <div id="top_img_container">
+      <img
+        id="random_img"
+        src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNvb2tpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+        alt="placeholder image"
+      />
+    </div>
+    <div>
+      <form class="form-inline my-2 my-lg-0">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          Search
+        </button>
+      </form>
+    </div>
+
     <!-- Link to the JS file -->
     <script src="./script.js"></script>
   </body>
