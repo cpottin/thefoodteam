@@ -23,7 +23,7 @@
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <h1 class="display-4">For The Love of Food</h1>
-        <p class="lead">Feeling Hungry? Searching for Recipes</p>
+        <p class="lead">Feeling Hungry? Search for Recipes</p>
         <ul class="nav">
           <li class="nav-item">
             <a class="nav-link active" href="#">Home</a>
@@ -41,25 +41,86 @@
     <!--DIV for top image container-->
     <div id="top_img_container">
       <img
+        class="center"
         id="random_img"
         src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNvb2tpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
         alt="placeholder image"
       />
     </div>
-    <div>
+
+    <!--Search Bar DIV-->
+    <div id="search_bar">
       <form class="form-inline my-2 my-lg-0">
         <input
-          class="form-control mr-sm-2"
+          class="form-control mr-sm-2 center"
           type="search"
-          placeholder="Search"
+          placeholder="Search for Recipes"
           aria-label="Search"
         />
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-          Search
+        <button id="search_button" class="btn my-2 my-sm-0" type="submit">
+          I'm Feeling Hungry
         </button>
       </form>
     </div>
 
+    <!--Card DIV-->
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src=".../100px200/" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            This is a longer card with supporting text below as a natural
+            lead-in to additional content. This content is a little bit longer.
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </p>
+        </div>
+      </div>
+      <div id="cards_container" class="card">
+        <img class="card-img-top" src=".../100px200/" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            This card has supporting text below as a natural lead-in to
+            additional content.
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src=".../100px200/" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This card has even longer content than the
+            first to show that equal height action.
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer DIV-->
+    <div id="footer_container">
+      <ul class="nav nav-pills nav-fill">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Longer nav link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+      </ul>
+    </div>
     <!-- Link to the JS file -->
     <script src="./script.js"></script>
   </body>
