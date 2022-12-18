@@ -12,7 +12,11 @@ export function getRecipes(search) {
             card_deck.innerHTML = "";
             debugger;
 
-            /*TODO: the layout for search results is not complete */
+            /*
+            TODO: the layout for search results is not complete 
+            results need to be styled such that there are 2 rows of 3 cards
+            information displayed on cards need to be decided
+            */
     
             for (let i = 0; i < json.results.length; i++) {
                 card_deck.innerHTML += `
@@ -30,6 +34,11 @@ export function getRecipes(search) {
                 </div>
                 </div>
                 `
+            }
+        })
+        .catch((error) => {
+            if (error) {
+                handleError();
             }
         })
     }
