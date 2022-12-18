@@ -1,3 +1,6 @@
+
+import {getRecipes} from "./recipes.js"
+
 const DEFAULT_ERROR_MESSAGE = "API call error: Please double check your url and make sure the server is up and running."
 /*dynamically display random recipes on landing page*/
 //https://api.spoonacular.com/recipes/random?apiKey=99e238076c3b4aa1a59a213bb6105964&number=3&tags=christmas
@@ -40,7 +43,14 @@ function showWeather({main: {temp}, weather: [weatherInfo]}){
 }
 
 /*Function to get recipes with search from landing page*/
+search_bar.addEventListener("submit", (event) => {
+    event.preventDefault();
 
+    getRecipes(search_term.value);
+
+    search_form.reset();
+})
+    
 function handleError(msg = DEFAULT_ERROR_MESSAGE) {
     const alert_container = document.createElement("div")
     alert_container.className = "alert alert-warning alert-dismissible fade show";
