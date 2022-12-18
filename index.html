@@ -47,9 +47,10 @@
 
     <!--Search Bar DIV-->
     <div id="search_bar">
-      <form class="form-inline my-2 my-lg-0">
+      <form id="search_form" class="form-inline my-2 my-lg-0">
         <input
           class="form-control mr-sm-2 center"
+          id="search_term"
           type="search"
           placeholder="Search for Recipes"
           aria-label="Search"
@@ -60,8 +61,9 @@
       </form>
     </div>
 
+
     <!--Card DIV-->
-    <div class="card-deck">
+    <div id="card_deck" class="card-deck">
       <div class="card">
         <img
           class="card-img-top"
@@ -131,6 +133,6 @@
       </ul>
     </div>
     <!-- Link to the JS file -->
-    <script src="./script.js"></script>
+    <script type="module" src="./script.js"></script>
   </body>
 </html>

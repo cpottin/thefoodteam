@@ -1,0 +1,1 @@
+export const DAVIDS_SPOON_KEY = "0ffce4da48204e589ed4407fadc60385"
