@@ -1,17 +1,26 @@
-  /*dynamically display random recipes on landing page*/
+/*dynamically display random recipes on landing page*/
 //https://api.spoonacular.com/recipes/random?apiKey=99e238076c3b4aa1a59a213bb6105964&number=3&tags=christmas
 //recipes.title and recipes.image
 
-export async function getLandingPageRecipes(){
-    const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=a232dda25ced41a38210df140283bb05&number=3&tags=chocolate`;
 
-    fetch(spoon_similar_recipes_URL)
-        .then((res) => res.json())
-        .then((json) =>{
-            card_deck.innerHTML ="";
-            
-            for (let i = 0; i < json.recipes.length; i++){
-            card_deck.innerHTML +=  `
+import {
+  DAVIDS_SPOON_KEY,
+  CINDYS_SPPON_KEY,
+  SHUOFEIS_SPOON_KEY,
+  SHUOFEIS2_SPOON_KEY,
+} from "./secrets.js";
+
+
+export async function getLandingPageRecipes() {
+  const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${SHUOFEIS2_SPOON_KEY}&number=3&tags=chocolate`;
+
+  fetch(spoon_similar_recipes_URL)
+    .then((res) => res.json())
+    .then((json) => {
+      card_deck.innerHTML = "";
+
+      for (let i = 0; i < json.recipes.length; i++) {
+        card_deck.innerHTML += `
             <div class="card">
                  <img
                    class="card-img-top"
@@ -25,6 +34,7 @@ export async function getLandingPageRecipes(){
                       </p>
                       <a id="recipe_card_btn" href="${json.recipes[i].spoonacularSourceUrl}" class="btn btn-primary">Go to Recipe Card</a>
                  </div>
+
                    </div>`
             }
         });
@@ -38,6 +48,7 @@ export async function getLandingPageRecipes(){
 //   }
 
 // }
+
 // export function quickQestion(){
 
 // }
