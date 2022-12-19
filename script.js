@@ -1,10 +1,8 @@
 import { getRecipes } from "./recipes.js";
+import { getLandingPageRecipes } from "./landing_page.js";
 
 const DEFAULT_ERROR_MESSAGE =
   "API call error: Please double check your url and make sure the server is up and running.";
-/*dynamically display random recipes on landing page*/
-//https://api.spoonacular.com/recipes/random?apiKey=99e238076c3b4aa1a59a213bb6105964&number=3&tags=christmas
-//recipes.title and recipes.image
 
 /*goelocation*/
 /* Get user's location if we can*/
@@ -42,6 +40,8 @@ function showWeather({ main: { temp }, weather: [weatherInfo] }) {
     `;
   document.getElementById("title_bar").append(weatherInfoContainer);
 }
+
+window.addEventListener("load", getLandingPageRecipes);
 
 /*Function to get recipes with search from landing page*/
 search_bar.addEventListener("submit", (event) => {
