@@ -1,5 +1,6 @@
 import { getRecipes } from "./recipes.js";
 import { getLandingPageRecipes } from "./landing_page.js";
+import { getRecipes } from "./recipes.js";
 
 const DEFAULT_ERROR_MESSAGE =
   "API call error: Please double check your url and make sure the server is up and running.";
@@ -78,3 +79,4 @@ team.addEventListener("click", goTeam);
 function goTeam() {
   window.location.href = "./team.html";
 }
+
