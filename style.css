@@ -6,30 +6,28 @@ CADET BLUE #669BB7
 PERU #CF8145
 
 /* TO DO: add font style that we select from google fonts*/
-.jumbotron{
-    background-color: #32657C;
-    color: whitesmoke;
+.jumbotron {
+  background-color: #32657c;
+  color: whitesmoke;
 }
-#top_img_container{
-    display: flex;
-    justify-content: center;
-    align-content: center;
+#top_img_container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
-#search_bar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-#search_button{
-    color: #FFE75D;
-    background-color: #669BB7;
+#search_bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-#footer_container{
-    background-color: #32657C;
+#search_button {
+  color: #ffe75d;
+  background-color: #669bb7;
+}
+
+#footer_container {
+  background-color: #32657c;
 }
 /*TO DO: apply flexbox to divs in body*/
-
-
