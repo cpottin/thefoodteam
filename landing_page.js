@@ -29,6 +29,10 @@ export async function getLandingPageRecipes(){
         });
 }
 
+
+// export function quickQestion(){
+
+// }
 // function showLandingPageRecipes({title: title, image: image, readyInMinutes: readyInMinutes}){
 //     card_deck.innerHTML = `
 //     <div class="card">
