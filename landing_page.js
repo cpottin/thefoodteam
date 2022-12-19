@@ -2,12 +2,14 @@
 //https://api.spoonacular.com/recipes/random?apiKey=99e238076c3b4aa1a59a213bb6105964&number=3&tags=christmas
 //recipes.title and recipes.image
 
+
 import {
   DAVIDS_SPOON_KEY,
   CINDYS_SPPON_KEY,
   SHUOFEIS_SPOON_KEY,
   SHUOFEIS2_SPOON_KEY,
 } from "./secrets.js";
+
 
 export async function getLandingPageRecipes() {
   const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${SHUOFEIS2_SPOON_KEY}&number=3&tags=chocolate`;
