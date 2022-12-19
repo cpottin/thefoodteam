@@ -30,4 +30,11 @@ PERU #CF8145
 #footer_container {
   background-color: #32657c;
 }
+
+
+body{
+    font-family: 'Courgette', cursive;
+    font-family: 'Merienda', cursive;
+}
 /*TO DO: apply flexbox to divs in body*/
+
