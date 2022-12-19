@@ -1,6 +1,6 @@
 import { getRecipes } from "./recipes.js";
 import { getLandingPageRecipes } from "./landing_page.js";
-import { getRecipes } from "./recipes.js";
+import { getRestaurantsByLocation } from "./restaurantInfo.js";
 
 const DEFAULT_ERROR_MESSAGE =
   "API call error: Please double check your url and make sure the server is up and running.";
@@ -69,8 +69,15 @@ function handleError(msg = DEFAULT_ERROR_MESSAGE) {
 
 /*Function to get recipes with search from landing page*/
 
-search_local_restaurants.addEventListener("submit", (event) => {
+search_local_restaurants.addEventListener("click", (event) => {
   event.preventDefault();
+  //console.log("search_local_restaurants responded2");
+  navigator.geolocation.getCurrentPosition(
+    getRestaurantsByLocation,
+    handleLocationError
+  );
 
-
-
+  function handleLocationError(err) {
+    handleError(err.message);
+  }
+});
