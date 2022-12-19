@@ -8,7 +8,7 @@ export function getRecipes(search) {
   fetchJson(apiUrl)
     .then((json) => {
       //remove top image container
-      top_img_container.remove();
+      top_img_container.innerHTML = "";
       // clear card deck
       card_deck.innerHTML = "";
       debugger;
