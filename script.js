@@ -42,7 +42,7 @@ function showWeather({ main: { temp }, weather: [weatherInfo] }) {
     </div>
     `;
 }
-
+//onload dynamically create 3 cards for the landing page
 window.addEventListener("load", getLandingPageRecipes);
 
 /*Function to get recipes with search from landing page*/
