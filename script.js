@@ -66,16 +66,10 @@ function handleError(msg = DEFAULT_ERROR_MESSAGE) {
   document.body.prepend(alert_container);
 }
 
-/*Function to go back to landing page by clicking "home" 12/18/22*/
-home.addEventListener("click", goHome);
+/*Function to get recipes with search from landing page*/
 
-function goHome() {
-  window.location.href = "./index.html";
-}
+search_local_restaurants.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-/*Function to go to team.html page by clicking "About the Team" 12/18/22*/
-team.addEventListener("click", goTeam);
-
-function goTeam() {
-  window.location.href = "./team.html";
-}
+  getRecipes(search_term.value);
+});
