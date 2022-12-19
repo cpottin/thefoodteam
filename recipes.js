@@ -1,15 +1,20 @@
-
-import { DAVIDS_SPOON_KEY, CINDYS_SPPON_KEY, SHUOFEIS_SPOON_KEY } from "./secrets.js";
+import {
+  DAVIDS_SPOON_KEY,
+  CINDYS_SPPON_KEY,
+  SHUOFEIS_SPOON_KEY,
+  SHUOFEIS2_SPOON_KEY,
+} from "./secrets.js";
 import { fetchJson } from "./fetchJson.js";
 import { handleError } from "./error.js";
 
-
 export function getRecipes(search) {
+
 
   //let apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${SHUOFEIS_SPOON_KEY}&query=${search}&number=6`;
   let apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${DAVIDS_SPOON_KEY}&query=${search}&addRecipeInformation=true&instructionsRequired=true&number=6`;
+
   //let apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${CINDYS_SPPON_KEY}&query=${search}&addRecipeInformation=true&instructionsRequired=true&number=6`;
-debugger;
+  debugger;
 
   fetchJson(apiUrl)
     .then((json) => {
@@ -45,11 +50,7 @@ debugger;
                 
                 </div>
                 `;
-                    
       }
-
-
-
     })
     .catch((error) => {
       if (error) {
@@ -58,12 +59,9 @@ debugger;
     });
 }
 
-
 //json.results[i].id.addEventListener("click", gotoRecipe)
 
 function gotoRecipe(recipeUrl) {
-    fetchJson(recipeUrl);
-    card_deck.innerHTML = `<img src="json.url"></image>`;
-    
-
+  fetchJson(recipeUrl);
+  card_deck.innerHTML = `<img src="json.url"></image>`;
 }
