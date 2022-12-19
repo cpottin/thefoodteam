@@ -38,7 +38,7 @@ debugger;
                 <small class="text-muted">Time to cook: ${json.results[i].readyInMinutes}</small>
                 </p>
                 <button class="btn btn-warning recipe" 
-                onclick="gotoRecipe("https://api.spoonacular.com/recipes/${json.results[i].id}/card?apiKey=${DAVIDS_SPOON_KEY}")">
+                onclick="gotoRecipe(this)" datat-recipe-id =${json.results[i].id}>
                 Go to Recipe
                 </button>
                 </div>
@@ -58,12 +58,11 @@ debugger;
     });
 }
 
-
+"https://api.spoonacular.com/recipes/${json.results[i].id}/card?apiKey=${DAVIDS_SPOON_KEY}"
 //json.results[i].id.addEventListener("click", gotoRecipe)
 
-function gotoRecipe(recipeUrl) {
+function gotoRecipe(id) {
+  let recipeUrl = `https://api.spoonacular.com/recipes/${id}/card?apiKey=${DAVIDS_SPOON_KEY}`
     fetchJson(recipeUrl);
-    card_deck.innerHTML = `<img src="json.url"></image>`;
-    
-
+    alert(id.innerHTML + " is " + recipe_id)
 }

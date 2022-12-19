@@ -3,7 +3,7 @@
 //recipes.title and recipes.image
 
 export async function getLandingPageRecipes(){
-    const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=3d25f0c4efc54cb8b91e9a20fb8d5499&number=3&tags=chocolate`;
+    const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=a232dda25ced41a38210df140283bb05&number=3&tags=chocolate`;
 
     fetch(spoon_similar_recipes_URL)
         .then((res) => res.json())
