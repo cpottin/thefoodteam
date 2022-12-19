@@ -43,14 +43,14 @@ function showWeather({ main: { temp }, weather: [weatherInfo] }) {
   document.getElementById("title_bar").append(weatherInfoContainer);
 }
 
-/*Function to get recipes with search from landing page*/
-search_bar.addEventListener("submit", (event) => {
-  event.preventDefault();
+// /*Function to get recipes with search from landing page*/
+// search_bar.addEventListener("submit", (event) => {
+//   event.preventDefault();
 
-  getRecipes(search_term.value);
+//   getRecipes(search_term.value);
 
-  search_form.reset();
-});
+//   search_form.reset();
+// });
 
 function handleError(msg = DEFAULT_ERROR_MESSAGE) {
   const alert_container = document.createElement("div");
