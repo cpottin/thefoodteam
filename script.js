@@ -1,6 +1,6 @@
 import { getRecipes } from "./recipes.js";
 import { getLandingPageRecipes } from "./landing_page.js";
-import { getRecipes } from "./recipes.js";
+
 
 const DEFAULT_ERROR_MESSAGE =
   "API call error: Please double check your url and make sure the server is up and running.";
@@ -71,6 +71,4 @@ function handleError(msg = DEFAULT_ERROR_MESSAGE) {
 
 search_local_restaurants.addEventListener("submit", (event) => {
   event.preventDefault();
-
-
-
+})
