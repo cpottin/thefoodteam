@@ -32,25 +32,17 @@ function getWeatherByLocation({ coords: { latitude: lat, longitude: lon } }) {
 }
 
 function showWeather({ main: { temp }, weather: [weatherInfo] }) {
-  const weatherInfoContainer = document.createElement("div");
+  const weatherInfoContainer = document.getElementById("weather_span");
 
   weatherInfoContainer.innerHTML = `
     <div align="right">
-    <p>${temp}&#8457; ${weatherInfo.description}</p>
+    <p>Today's Weather</p>
+    <p>Temp: ${temp}&#8457; </p>
+    <p>${weatherInfo.description}</p>
     <img src="https://openweathermap.org/img/wn/${weatherInfo.icon}@2x.png"/>
     </div>
     `;
-  document.getElementById("title_bar").append(weatherInfoContainer);
 }
-
-// /*Function to get recipes with search from landing page*/
-// search_bar.addEventListener("submit", (event) => {
-//   event.preventDefault();
-
-//   getRecipes(search_term.value);
-
-//   search_form.reset();
-// });
 
 function handleError(msg = DEFAULT_ERROR_MESSAGE) {
   const alert_container = document.createElement("div");
