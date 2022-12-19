@@ -30,11 +30,22 @@ export async function getLandingPageRecipes() {
                       <p class="card-text">
                         <small class="text-muted">Time to Prep: ${json.recipes[i].readyInMinutes}</small>
                       </p>
+                      <a id="recipe_card_btn" href="${json.recipes[i].spoonacularSourceUrl}" class="btn btn-primary">Go to Recipe Card</a>
                  </div>
-            </div>`;
-      }
-    });
+
+                   </div>`
+            }
+        });
 }
+
+
+// function gotoRecipeCard(id){
+//   const urlRecipeCard = `https://api.spoonacular.com/recipes/${id}/card`
+//   fetch(urlRecipeCard){
+
+//   }
+
+// }
 
 // export function quickQestion(){
 
