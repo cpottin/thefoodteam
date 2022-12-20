@@ -4,7 +4,6 @@ import { getLandingPageRecipes } from "./landing_page.js";
 import { getRestaurantsByLocation } from "./restaurantInfo.js";
 
 
-
 const DEFAULT_ERROR_MESSAGE =
   "API call error: Please double check your url and make sure the server is up and running.";
 
