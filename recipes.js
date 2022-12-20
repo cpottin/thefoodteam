@@ -3,6 +3,7 @@ import {
   CINDYS_SPPON_KEY,
   SHUOFEIS_SPOON_KEY,
   SHUOFEIS2_SPOON_KEY,
+  CINDY2_SPOON_KEY
 } from "./secrets.js";
 import { fetchJson } from "./fetchJson.js";
 import { handleError } from "./error.js";
@@ -12,7 +13,7 @@ export function getRecipes(search) {
 
 
   //let apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${SHUOFEIS_SPOON_KEY}&query=${search}&number=6`;
-  let apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${DAVIDS_SPOON_KEY}&query=${search}&addRecipeInformation=true&instructionsRequired=true&number=6`;
+  let apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${CINDY2_SPOON_KEY}&query=${search}&addRecipeInformation=true&instructionsRequired=true&number=6`;
 
   //let apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${CINDYS_SPPON_KEY}&query=${search}&addRecipeInformation=true&instructionsRequired=true&number=6`;
   debugger;
@@ -71,7 +72,7 @@ function gotoRecipe(event) {
     //get button by class with classlist
     if(recipeBtn.classList.contains("recipe_card_btn")){
     //need to add idValue to attributes?  
-     fetch(`https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=99e238076c3b4aa1a59a213bb6105964`)
+     fetch(`https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${CINDY2_SPOON_KEY}`)
       .then((res) => res.json())
       .then((json) => {
         //remove top image container
