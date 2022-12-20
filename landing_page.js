@@ -3,12 +3,15 @@
 //recipes.title and recipes.image
 
 
+import { DEFAULT_ERROR_MESSAGE } from "./constants.js";
 import {
   DAVIDS_SPOON_KEY,
   CINDYS_SPPON_KEY,
   SHUOFEIS_SPOON_KEY,
   SHUOFEIS2_SPOON_KEY,
 } from "./secrets.js";
+
+import { DEFAULT_IMAGE } from "./constants.js";
 
 
 export async function getLandingPageRecipes() {
@@ -24,7 +27,7 @@ export async function getLandingPageRecipes() {
             <div class="card">
                  <img
                    class="card-img-top"
-                   src="${json.recipes[i].image}"
+                   src="${json.recipes[i].image ? json.recipes[i].image : DEFAULT_IMAGE}"
                        alt="${json.recipes[i].title}"
                     />
                     <div class="card-body">
@@ -32,14 +35,14 @@ export async function getLandingPageRecipes() {
                       <p class="card-text">
                         <small class="text-muted">Time to Prep: ${json.recipes[i].readyInMinutes}</small>
                       </p>
-                      <a id="recipe_card_btn" href="${json.recipes[i].spoonacularSourceUrl}" class="btn btn-primary">Go to Recipe Card</a>
+                      <a onlick="displayRecipeCard()" id="${json.recipes[i].id}" class="btn btn-primary recipe_card_btn">Go to Recipe Card</a>
                  </div>
 
                    </div>`
             }
         });
-}
 
+}
 
 // function gotoRecipeCard(id){
 //   const urlRecipeCard = `https://api.spoonacular.com/recipes/${id}/card`
@@ -50,22 +53,16 @@ export async function getLandingPageRecipes() {
 // }
 
 // export function quickQestion(){
+//clickedbtn.addEventListener('click', displayRecipeCard());
 
-// }
-// function showLandingPageRecipes({title: title, image: image, readyInMinutes: readyInMinutes}){
-//     card_deck.innerHTML = `
-//     <div class="card">
-//         <img
-//           class="card-img-top"
-//           src="${image}"
-//           alt="${title}"
-//         />
-//         <div class="card-body">
-//           <h5 class="card-title">${title}</h5>
-//           <p class="card-text">
-//             <small class="text-muted">Time to Prep: ${readyInMinutes}</small>
-//           </p>
-//         </div>
-//       </div>
-//     `
-//     }
+function displayRecipeCard(event){
+const clickedBtn = event.target;
+ //const clickedBtn = document.getElementsByClassName('recipe_card_btn');
+//need to add idValue to attributes?
+ const clickedID = clickedBtn.id;    
+ fetch(`https://api.spoonacular.com/recipes/${clickedID}/card?apiKey=99e238076c3b4aa1a59a213bb6105964`)
+     .then((res) => res.json())
+     .then((json) => {
+       console.log(json.url);
+   });
+ }

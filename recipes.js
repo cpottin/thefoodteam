@@ -6,6 +6,7 @@ import {
 } from "./secrets.js";
 import { fetchJson } from "./fetchJson.js";
 import { handleError } from "./error.js";
+import { DEFAULT_IMAGE } from "./constants.js";
 
 export function getRecipes(search) {
 
@@ -34,7 +35,7 @@ export function getRecipes(search) {
                 <div class="card">
                     <img
                     class="card-img-top"
-                    src="${json.results[i].image}"
+                    src="${json.results[i].image ? json.results[i].image : DEFAULT_IMAGE}"
                     alt="picture of ${json.results[i].title}"
                     />
                 <div class="card-body">
