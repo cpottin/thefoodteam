@@ -8,6 +8,7 @@ import {
   CINDYS_SPPON_KEY,
   SHUOFEIS_SPOON_KEY,
   SHUOFEIS2_SPOON_KEY,
+  CINDY2_SPOON_KEY
 } from "./secrets.js";
 
 import { DEFAULT_IMAGE } from "./constants.js";
@@ -41,10 +42,12 @@ export async function getLandingPageRecipes() {
                       </p>
 
 
+
                       <button type="button" id="${
                         json.recipes[i].id
                       }" class="btn btn-info recipe_card_btn">Go to Recipe Card</button>
  
+
                       
         
                  </div>
@@ -65,7 +68,9 @@ function displayRecipeCard(event) {
   if (recipeBtn.classList.contains("recipe_card_btn")) {
     //need to add idValue to attributes?
     fetch(
-      `https://api.spoonacular.com/recipes/${recipeID}/card?${DAVIDS_SPOON_KEY}`
+
+      `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${CINDY2_SPOON_KEY}`
+
     )
       .then((res) => res.json())
       .then((json) => {
@@ -82,4 +87,16 @@ function displayRecipeCard(event) {
                 `;
       });
   }
+}
+
+export function getJoke(){
+  const jokeURL = `https://api.spoonacular.com/food/trivia/random?apiKey=${DAVIDS_SPOON_KEY}`;
+  fetch(jokeURL)
+  .then((res) => res.json())
+  .then((json) => {
+    top_img_container.innerHTML = "";
+    top_img_container.innerHTML = `<div>
+    <p>FOOD TRIVIA: ${json.text}</p>
+    </div>`;
+});
 }
