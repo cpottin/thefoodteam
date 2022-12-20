@@ -9,6 +9,9 @@ PERU #CF8145
 .jumbotron {
   background-color:#32657C;
   color: #CF8145;
+
+  opacity: 80%;
+
 }
 #top_img_container {
   display: flex;

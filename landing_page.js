@@ -36,12 +36,17 @@ export async function getLandingPageRecipes() {
                     <div class="card-body">
                       <h5 class="card-title">${json.recipes[i].title}</h5>
                       <p class="card-text">
-                        <small class="text-muted">Time to Prep: ${
+                        <small class="text-muted">Time to cook: ${
                           json.recipes[i].readyInMinutes
-                        }</small>
+                        } mins</small>
                       </p>
 
-                      <button type="button" id="${json.recipes[i].id}" class="btn btn-info recipe_card_btn">Go to Recipe Card</button>
+
+
+                      <button type="button" id="${
+                        json.recipes[i].id
+                      }" class="btn btn-info recipe_card_btn">Go to Recipe Card</button>
+ 
 
                       
         
@@ -63,7 +68,9 @@ function displayRecipeCard(event) {
   if (recipeBtn.classList.contains("recipe_card_btn")) {
     //need to add idValue to attributes?
     fetch(
+
       `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${CINDY2_SPOON_KEY}`
+
     )
       .then((res) => res.json())
       .then((json) => {

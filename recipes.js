@@ -10,8 +10,6 @@ import { handleError } from "./error.js";
 import { DEFAULT_IMAGE } from "./constants.js";
 
 export function getRecipes(search) {
-
-
   //let apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${SHUOFEIS_SPOON_KEY}&query=${search}&number=6`;
   let apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${CINDY2_SPOON_KEY}&query=${search}&addRecipeInformation=true&instructionsRequired=true&number=6`;
 
@@ -36,15 +34,25 @@ export function getRecipes(search) {
                 <div class="card">
                     <img
                     class="card-img-top"
-                    src="${json.results[i].image ? json.results[i].image : DEFAULT_IMAGE}"
+                    src="${
+                      json.results[i].image
+                        ? json.results[i].image
+                        : DEFAULT_IMAGE
+                    }"
                     alt="picture of ${json.results[i].title}"
                     />
                 <div class="card-body">
                 <h5 class="card-title">${json.results[i].title}</h5>
                 <p class="card-text">
-                <small class="text-muted">Time to cook: ${json.results[i].readyInMinutes}</small>
+                <small class="text-muted">Time to cook: ${
+                  json.results[i].readyInMinutes
+                } mins</small>
                 </p>
-                <button type="button" id="${json.results[i].id}" class="btn btn-warning recipe_card_btn">
+
+                <button type="button" id="${
+                  json.results[i].id
+                }" class="btn btn-warning recipe_card_btn">
+
                 Go to Recipe Card
                 </button>
                 </div>
@@ -60,6 +68,8 @@ export function getRecipes(search) {
     });
 }
 
+document.body.addEventListener("click", gotoRecipe);
+
 
 
 document.body.addEventListener("click", gotoRecipe);
@@ -73,6 +83,7 @@ function gotoRecipe(event) {
     if(recipeBtn.classList.contains("recipe_card_btn")){
     //need to add idValue to attributes?  
      fetch(`https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${CINDY2_SPOON_KEY}`)
+
       .then((res) => res.json())
       .then((json) => {
         //remove top image container
@@ -86,7 +97,9 @@ function gotoRecipe(event) {
                     />
         </div>
                 `;
+
     });
   }
+
 
 }
