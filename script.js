@@ -2,6 +2,7 @@ import { getRecipes } from "./recipes.js";
 import { getLandingPageRecipes } from "./landing_page.js";
 import { getRestaurantsByLocation } from "./restaurantInfo.js";
 import { getTeamInfo } from "./team.js";
+import { getJoke } from "./landing_page.js";
 
 const DEFAULT_ERROR_MESSAGE =
   "API call error: Please double check your url and make sure the server is up and running.";
@@ -88,4 +89,10 @@ search_local_restaurants.addEventListener("click", (event) => {
 about_the_team.addEventListener("click", (event) => {
   event.preventDefault();
   getTeamInfo();
+});
+
+/*Funntion to get Random Joke and prepend it to the landing page*/
+random_joke.addEventListener("click", (event) => {
+  event.preventDefault();
+  getJoke();
 });
