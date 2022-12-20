@@ -7,8 +7,9 @@ PERU #CF8145
 
 /* TO DO: add font style that we select from google fonts*/
 .jumbotron {
-  background-color: #32657c;
-  color: whitesmoke;
+  background-color:#32657C;
+  color: #CF8145;
+  opacity: 80%;
 }
 #top_img_container {
   display: flex;
@@ -23,17 +24,21 @@ PERU #CF8145
 }
 
 #search_button {
-  color: #ffe75d;
-  background-color: #669bb7;
+  color: #FFE75D;
+  background-color: #669BB7;
 }
 
 #footer_container {
-  background-color: #32657c;
+  background-color: #32657C;
 }
 
 
 body{
     font-family: 'Merienda', cursive;
+
 }
 /*TO DO: apply flexbox to divs in body*/
 
+#weather_span{
+  background-color: #669BB7;
+}
