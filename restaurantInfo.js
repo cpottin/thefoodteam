@@ -11,7 +11,7 @@ import { handleError } from "./error.js";
 export function getRestaurantsByLocation({
   coords: { latitude: lat, longitude: lon },
 }) {
-  const restaurantsURL = `https://api.spoonacular.com/food/restaurants/search?apiKey=${SHUOFEIS2_SPOON_KEY}&lat=${lat}&lng=${lon}`;
+  const restaurantsURL = `https://api.spoonacular.com/food/restaurants/search?apiKey=${SHUOFEIS_SPOON_KEY}&lat=${lat}&lng=${lon}`;
 
   fetchJson(restaurantsURL)
     .then((json) => {
