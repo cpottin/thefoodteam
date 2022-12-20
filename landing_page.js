@@ -13,7 +13,7 @@ import {
 import { DEFAULT_IMAGE } from "./constants.js";
 
 export async function getLandingPageRecipes() {
-  const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${CINDYS_SPPON_KEY}&number=3&tags=chocolate`;
+  const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${DAVIDS_SPOON_KEY}&number=3&tags=chocolate`;
 
   fetch(spoon_similar_recipes_URL)
     .then((res) => res.json())
@@ -24,7 +24,7 @@ export async function getLandingPageRecipes() {
         card_deck.innerHTML += `
             <div class="card">
                  <img
-                   class="card-img-top"
+                   class="card-img-top rounded-top"
                    src="${
                      json.recipes[i].image
                        ? json.recipes[i].image
@@ -35,14 +35,16 @@ export async function getLandingPageRecipes() {
                     <div class="card-body">
                       <h5 class="card-title">${json.recipes[i].title}</h5>
                       <p class="card-text">
-                        <small class="text-muted">Time to Prep: ${
+                        <small class="text-muted">Time to cook: ${
                           json.recipes[i].readyInMinutes
-                        }</small>
+                        } mins</small>
                       </p>
 
-                      <button id="${
+
+                      <button type="button" id="${
                         json.recipes[i].id
-                      }" class="recipe_card_btn">Go to Recipe Card</button>
+                      }" class="btn btn-info recipe_card_btn">Go to Recipe Card</button>
+ 
                       
         
                  </div>
@@ -63,7 +65,7 @@ function displayRecipeCard(event) {
   if (recipeBtn.classList.contains("recipe_card_btn")) {
     //need to add idValue to attributes?
     fetch(
-      `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=99e238076c3b4aa1a59a213bb6105964`
+      `https://api.spoonacular.com/recipes/${recipeID}/card?${DAVIDS_SPOON_KEY}`
     )
       .then((res) => res.json())
       .then((json) => {
