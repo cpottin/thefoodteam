@@ -8,7 +8,7 @@ import {
   CINDYS_SPPON_KEY,
   SHUOFEIS_SPOON_KEY,
   SHUOFEIS2_SPOON_KEY,
-  CINDY2_SPOON_KEY
+  CINDY2_SPOON_KEY,
 } from "./secrets.js";
 
 import { DEFAULT_IMAGE } from "./constants.js";
@@ -36,12 +36,14 @@ export async function getLandingPageRecipes() {
                     <div class="card-body">
                       <h5 class="card-title">${json.recipes[i].title}</h5>
                       <p class="card-text">
-                        <small class="text-muted">Time to Prep: ${
+                        <small class="text-muted">Time to cook: ${
                           json.recipes[i].readyInMinutes
-                        }</small>
+                        } mins</small>
                       </p>
 
-                      <button type="button" id="${json.recipes[i].id}" class="btn btn-info recipe_card_btn">Go to Recipe Card</button>
+                      <button type="button" id="${
+                        json.recipes[i].id
+                      }" class="btn btn-info recipe_card_btn">Go to Recipe Card</button>
 
                       
         
@@ -82,14 +84,14 @@ function displayRecipeCard(event) {
   }
 }
 
-export function getJoke(){
+export function getJoke() {
   const jokeURL = `https://api.spoonacular.com/food/trivia/random?apiKey=${DAVIDS_SPOON_KEY}`;
   fetch(jokeURL)
-  .then((res) => res.json())
-  .then((json) => {
-    top_img_container.innerHTML = "";
-    top_img_container.innerHTML = `<div>
+    .then((res) => res.json())
+    .then((json) => {
+      top_img_container.innerHTML = "";
+      top_img_container.innerHTML = `<div>
     <p>FOOD TRIVIA: ${json.text}</p>
     </div>`;
-});
+    });
 }
