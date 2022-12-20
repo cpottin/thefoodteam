@@ -1,6 +1,5 @@
 import { getRecipes } from "./recipes.js";
 import { getLandingPageRecipes } from "./landing_page.js";
-
 import { getRestaurantsByLocation } from "./restaurantInfo.js";
 
 
