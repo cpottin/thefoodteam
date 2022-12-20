@@ -8,6 +8,7 @@ import {
   CINDYS_SPPON_KEY,
   SHUOFEIS_SPOON_KEY,
   SHUOFEIS2_SPOON_KEY,
+  CINDY2_SPOON_KEY
 } from "./secrets.js";
 
 import { DEFAULT_IMAGE } from "./constants.js";
@@ -62,7 +63,7 @@ function displayRecipeCard(event) {
   if (recipeBtn.classList.contains("recipe_card_btn")) {
     //need to add idValue to attributes?
     fetch(
-      `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=99e238076c3b4aa1a59a213bb6105964`
+      `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${CINDY2_SPOON_KEY}`
     )
       .then((res) => res.json())
       .then((json) => {
