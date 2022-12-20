@@ -6,6 +6,7 @@ import {
 } from "./secrets.js";
 import { fetchJson } from "./fetchJson.js";
 import { handleError } from "./error.js";
+import { DEFAULT_IMAGE } from "./constants.js";
 
 //function to get resturant by location
 export function getRestaurantsByLocation({
@@ -21,7 +22,11 @@ export function getRestaurantsByLocation({
         <div class="card">
              <img
                class="card-img-top"
-               src="${json.restaurants[i].logo_photos}"
+               src="${
+                 json.restaurants[i].logo_photos
+                   ? json.restaurants[i].logo_photos
+                   : DEFAULT_IMAGE
+               }"
                    alt="${json.restaurants[i].logo_photos}"
                 />
                 <div class="card-body">

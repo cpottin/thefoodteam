@@ -30,12 +30,16 @@ export function getTeamInfo() {
       <div class="card">
         <img
           class="card-img-top"
-          src="https://spoonacular.com/recipeImages/73420-312x231.jpg"
+          src="https://i.ibb.co/D1YvfGw/20221113-223759681-i-OS.jpg"
           alt="Card image cap"
         />
         <div class="card-body">
           <h5 class="card-title">Shuofei Wu</h5>
-          <p class="card-text"></p>
+          <p class="card-text">
+          Shuofei is a software engineer and a national guard member. He loves to
+          try different cuisines but is not good at cooking. He is going to get recipes on this website
+          to ger more practices, just like his coding skills - more practices needed.
+          </p>
         </div>
       </div>`;
 }

@@ -13,9 +13,7 @@ import {
 import { DEFAULT_IMAGE } from "./constants.js";
 
 export async function getLandingPageRecipes() {
-
   const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${CINDYS_SPPON_KEY}&number=3&tags=chocolate`;
-
 
   fetch(spoon_similar_recipes_URL)
     .then((res) => res.json())
@@ -43,30 +41,29 @@ export async function getLandingPageRecipes() {
                       </p>
 
                       <button type="button" id="${json.recipes[i].id}" class="btn btn-info recipe_card_btn">Go to Recipe Card</button>
+
                       
         
                  </div>
 
-                   </div>`
-            }
-
-});
+                   </div>`;
+      }
+    });
 }
 
+document.body.addEventListener("click", displayRecipeCard);
 
-
-document.body.addEventListener('click', displayRecipeCard);
-
-
-function displayRecipeCard(event){     
-  //identified the evnet target  
+function displayRecipeCard(event) {
+  //identified the evnet target
   const recipeBtn = event.target;
-    //get ID from the button when the id is the id from the first call
+  //get ID from the button when the id is the id from the first call
   const recipeID = recipeBtn.id;
-    //get button by class with classlist
-    if(recipeBtn.classList.contains("recipe_card_btn")){
-    //need to add idValue to attributes?  
-     fetch(`https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=99e238076c3b4aa1a59a213bb6105964`)
+  //get button by class with classlist
+  if (recipeBtn.classList.contains("recipe_card_btn")) {
+    //need to add idValue to attributes?
+    fetch(
+      `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=99e238076c3b4aa1a59a213bb6105964`
+    )
       .then((res) => res.json())
       .then((json) => {
         //remove top image container
@@ -80,7 +77,6 @@ function displayRecipeCard(event){
                     />
         </div>
                 `;
-    });
+      });
   }
-
 }
