@@ -26,7 +26,7 @@ export async function getLandingPageRecipes() {
         card_deck.innerHTML += `
             <div class="card">
                  <img
-                   class="card-img-top"
+                   class="card-img-top rounded-top"
                    src="${
                      json.recipes[i].image
                        ? json.recipes[i].image
@@ -42,7 +42,7 @@ export async function getLandingPageRecipes() {
                         }</small>
                       </p>
 
-                      <button id="${json.recipes[i].id}" class="recipe_card_btn">Go to Recipe Card</button>
+                      <button type="button" id="${json.recipes[i].id}" class="btn btn-info recipe_card_btn">Go to Recipe Card</button>
                       
         
                  </div>
