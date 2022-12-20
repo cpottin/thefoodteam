@@ -43,9 +43,8 @@ export function getRecipes(search) {
                 <p class="card-text">
                 <small class="text-muted">Time to cook: ${json.results[i].readyInMinutes}</small>
                 </p>
-                <button class="btn btn-warning recipe" 
-                onclick="gotoRecipe(this)" datat-recipe-id =${json.results[i].id}>
-                Go to Recipe
+                <button type="button" id="${json.results[i].id}" class="btn btn-warning recipe_card_btn">
+                Go to Recipe Card
                 </button>
                 </div>
                 
@@ -62,10 +61,31 @@ export function getRecipes(search) {
 
 
 
-//json.results[i].id.addEventListener("click", gotoRecipe)
+document.body.addEventListener("click", gotoRecipe);
 
-function gotoRecipe(recipeUrl) {
-  fetchJson(recipeUrl);
-  card_deck.innerHTML = `<img src="json.url"></image>`;
+function gotoRecipe(event) {
+  //identified the evnet target  
+  const recipeBtn = event.target;
+    //get ID from the button when the id is the id from the first call
+  const recipeID = recipeBtn.id;
+    //get button by class with classlist
+    if(recipeBtn.classList.contains("recipe_card_btn")){
+    //need to add idValue to attributes?  
+     fetch(`https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=99e238076c3b4aa1a59a213bb6105964`)
+      .then((res) => res.json())
+      .then((json) => {
+        //remove top image container
+        top_img_container.innerHTML = "";
+        // clear card deck
+        card_deck.innerHTML = "";
+        card_deck.innerHTML = `
+        <div>
+                    <img
+                    src="${json.url}"
+                    />
+        </div>
+                `;
+    });
+  }
 
 }
