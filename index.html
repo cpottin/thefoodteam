@@ -21,13 +21,31 @@
       href="https://fonts.googleapis.com/css2?family=Merienda&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <!-- Link to the CSS file -->
     <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
-    <!--title bar with 3 nav links-->
+    <div class="food-image">
+      <div id="title_bar" class="jumbotron">
+        <span id="weather_span" style="float: right" class="badge badge-light"
+          >Weather</span
+        >
+        <h1>For The Love Of Food</h1>
+        <p>Feeling Hungry? Search for Recipes</p>
+
+        <nav id="nav bar" class="navbar navbar-light">
+          <a class="navbar-brand" href="./index.html">
+            <span class="material-icons"> home </span> Home</a
+          >
+        </nav>
+      </div>
+    </div>
+    <!-- title bar with home nav links
     <div id="title_bar" class="jumbotron jumbotron-fluid">
       <div class="container">
         <span id="weather_span" style="float: right" class="badge badge-light"
@@ -41,9 +59,9 @@
           </li>
         </ul>
       </div>
-    </div>
+    </div> -->
 
-    <!--DIV for top image container-->
+    <!-- DIV for top image container -->
     <div id="top_img_container">
       <img
         class="center"
@@ -113,7 +131,7 @@
     </div>
 
     <!--Footer DIV-->
-    <div id="footer_container">
+    <footer class="container-fluid" id="footer_container">
       <ul class="nav nav-pills nav-fill">
         <li class="nav-item">
           <a class="nav-link" id="search_local_restaurants" href="#"
@@ -127,7 +145,8 @@
           <a class="nav-link" id="about_the_team" href="#">About the Team</a>
         </li>
       </ul>
-    </div>
+    </footer>
+
     <!-- Link to the JS file -->
     <script type="module" src="./script.js"></script>
   </body>

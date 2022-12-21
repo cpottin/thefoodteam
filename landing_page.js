@@ -100,3 +100,12 @@ export function getJoke(){
     </div>`;
 });
 }
+
+/* const triviaModal = document.createElement('div');
+    triviaModal.classList.add("modal-dialog modal-dialog-centered modal-dialog-scrollable");
+    triviaModal.id("trivia_modal");
+    triviaModal.innerHTML =`
+    <div class ="modalContent"
+    <span class="close">&times;</span>
+    <p>FOOD TRIVIA: ${json.text}</p>
+    </div>`;*/

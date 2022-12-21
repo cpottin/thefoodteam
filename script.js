@@ -96,3 +96,4 @@ random_joke.addEventListener("click", (event) => {
   event.preventDefault();
   getJoke();
 });
+
