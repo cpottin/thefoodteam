@@ -28,19 +28,38 @@
 
   <body>
     <!--title bar with 3 nav links-->
-    <div id="title_bar" class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <span id="weather_span" style="float: right" class="badge badge-light"
+    <div id="title_bar" class="container-fluid">
+      <header class="d-flex flex-wrap justify-content-center">
+        <div>
+          <h1>For The Love of Food</h1>
+          <p class="lead">Feeling Hungry? Search for Recipes</p>
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link" aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="search_local_restaurants" href="#"
+                >Nearby Restaurants</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Trivia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="about_the_team" href="#"
+                >About the Team</a
+              >
+            </li>
+          </ul>
+        </div>
+        <span
+          id="weather_span"
+          class="d-flex flex-wrap justify-content-center badge badge-light"
           >Weather</span
         >
-        <h6 class="display-4">For The Love of Food</h6>
-        <p class="lead">Feeling Hungry? Search for Recipes</p>
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link active" id="home" href="./index.html">Home</a>
-          </li>
-        </ul>
-      </div>
+      </header>
     </div>
 
     <!--DIV for top image container-->
@@ -113,21 +132,25 @@
     </div>
 
     <!--Footer DIV-->
-    <div id="footer_container">
+    <!-- <div id="footer_container">
       <ul class="nav nav-pills nav-fill">
         <li class="nav-item">
-          <a class="nav-link" id="search_local_restaurants" href="#"
+          <a class="nav-link footer" id="search_local_restaurants2" href="#"
             >Find Nearby Restaurants</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="random_joke" href="#">Random Food Trivia</a>
+          <a class="nav-link footer" id="random_joke2" href="#"
+            >Random Food Trivia</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="about_the_team" href="#">About the Team</a>
+          <a class="nav-link footer" id="about_the_team2" href="#"
+            >About the Team</a
+          >
         </li>
       </ul>
-    </div>
+    </div> -->
     <!-- Link to the JS file -->
     <script type="module" src="./script.js"></script>
   </body>
