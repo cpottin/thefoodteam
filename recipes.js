@@ -72,6 +72,7 @@ export function gotoRecipe(event) {
   // let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${SHUOFEIS2_SPOON_KEY}`
   // let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${DAVIDS_SPOON_KEY}`
 
+<<<<<<< HEAD
   if (recipeBtn.classList.contains("recipe_card_btn")) {
     //need to add idValue to attributes?
     fetchJson(recipeUrl).then((json) => {
@@ -84,6 +85,17 @@ export function gotoRecipe(event) {
                     <img
                     src="${json.url}"
                     />
+=======
+        //remove top image container
+        top_img_container.innerHTML = "";
+        // clear card deck
+        card_deck.innerHTML = "";
+        card_deck.innerHTML = `
+                  <div class="container-fluid">
+                      <div class="row justify-content-center">
+                      <img src="${json.url}" width="500" height="600">
+                      </div>
+>>>>>>> 1a60ce9250d52e7b1113ce07f4dbf36215ed0c48
                   </div>
                   `;
     });
