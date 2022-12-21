@@ -84,10 +84,10 @@ export function gotoRecipe(event) {
         // clear card deck
         card_deck.innerHTML = "";
         card_deck.innerHTML = `
-                  <div>
-                    <img
-                    src="${json.url}"
-                    />
+                  <div class="container-fluid">
+                      <div class="row justify-content-center">
+                      <img src="${json.url}" width="700" height="900">
+                      </div>
                   </div>
                   `;
     });

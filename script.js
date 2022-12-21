@@ -92,5 +92,7 @@ about_the_team.addEventListener("click", (event) => {
 // });
 
 
+
 // GoTo full Recipes  works for both landing results and search results
 document.body.addEventListener("click", gotoRecipe);
+

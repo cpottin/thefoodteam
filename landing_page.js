@@ -9,7 +9,9 @@ import { DEFAULT_IMAGE } from "./constants.js";
 
 // Loads random recipes on home page
 export async function getLandingPageRecipes() {
+
   // const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${DAVIDS_SPOON_KEY}&number=3&tags=chocolate`;
+
   const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${CINDYS_SPPON_KEY}&number=3&tags=chocolate`;
   //const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${CINDY2_SPOON_KEY}&number=3&tags=chocolate`;
   //const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${SHUOFEIS_SPOON_KEY}&number=3&tags=chocolate`;
@@ -62,3 +64,12 @@ export function getJoke(){
     </div>`;
 });
 }
+
+/* const triviaModal = document.createElement('div');
+    triviaModal.classList.add("modal-dialog modal-dialog-centered modal-dialog-scrollable");
+    triviaModal.id("trivia_modal");
+    triviaModal.innerHTML =`
+    <div class ="modalContent"
+    <span class="close">&times;</span>
+    <p>FOOD TRIVIA: ${json.text}</p>
+    </div>`;*/
