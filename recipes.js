@@ -86,7 +86,7 @@ export function gotoRecipe(event) {
         card_deck.innerHTML = `
                   <div class="container-fluid">
                       <div class="row justify-content-center">
-                      <img src="${json.url}" width="500" height="600">
+                      <img src="${json.url}" width="700" height="900">
                       </div>
                   </div>
                   `;
