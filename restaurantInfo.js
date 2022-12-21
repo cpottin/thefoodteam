@@ -8,7 +8,7 @@ import { fetchJson } from "./fetchJson.js";
 import { handleError } from "./error.js";
 import { DEFAULT_IMAGE } from "./constants.js";
 
-//function to get resturant by location
+//get nearby resturant by location
 export function getRestaurantsByLocation({
   coords: { latitude: lat, longitude: lon },
 }) {
