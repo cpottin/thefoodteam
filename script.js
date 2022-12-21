@@ -82,5 +82,7 @@ random_joke.addEventListener("click", (event) => {
   getJoke();
 });
 
+
 // GoTo full Recipes  works for both landing results and search results
 document.body.addEventListener("click", gotoRecipe);
+
