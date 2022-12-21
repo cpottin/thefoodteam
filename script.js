@@ -35,7 +35,7 @@ function showWeather({ main: { temp }, weather: [weatherInfo] }) {
   const weatherInfoContainer = document.getElementById("weather_span");
 
   weatherInfoContainer.innerHTML = `
-    <div align="right">
+    <div>
     <p>Today's Weather</p>
     <p>Temp: ${temp}&#8457; </p>
     <p>${weatherInfo.description}</p>
@@ -70,17 +70,27 @@ search_local_restaurants.addEventListener("click", (event) => {
   }
 });
 
+
+
+
 /*get team info with About the Team on landing page*/
 about_the_team.addEventListener("click", (event) => {
   event.preventDefault();
   getTeamInfo();
 });
 
+
+
 /*get Random Joke and prepend it to the landing page*/
-random_joke.addEventListener("click", (event) => {
-  event.preventDefault();
-  getJoke();
-});
+// random_joke.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   getJoke();
+// });
+// random_joke2.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   getJoke();
+// });
+
 
 
 // GoTo full Recipes  works for both landing results and search results

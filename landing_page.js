@@ -9,7 +9,9 @@ import { DEFAULT_IMAGE } from "./constants.js";
 
 // Loads random recipes on home page
 export async function getLandingPageRecipes() {
-  //const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${DAVIDS_SPOON_KEY}&number=3&tags=chocolate`;
+
+  // const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${DAVIDS_SPOON_KEY}&number=3&tags=chocolate`;
+
   const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${CINDYS_SPPON_KEY}&number=3&tags=chocolate`;
   //const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${CINDY2_SPOON_KEY}&number=3&tags=chocolate`;
   //const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${SHUOFEIS_SPOON_KEY}&number=3&tags=chocolate`;
@@ -33,7 +35,7 @@ export async function getLandingPageRecipes() {
               <div class="card-body">
                 <h5 class="card-title">${json.recipes[i].title}</h5>
                 <p class="card-text">
-                  <small class="text-muted">Time to cook: ${
+                  <small class="text-muted">Ready In: ${
                     json.recipes[i].readyInMinutes
                   } mins
                   </small>
