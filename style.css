@@ -4,8 +4,11 @@ PINKISH RED #D24970
 DARK SLATE BLUE #32657C
 CADET BLUE #669BB7
 PERU #CF8145
+*/
 
-/* TO DO: add font style that we select from google fonts*/
+#top_div{
+  position: sticky;
+}
 .jumbotron {
   opacity: 70%;
 
@@ -45,10 +48,7 @@ body{
 
 /* The food image */
 .food-image {
-/* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
 background-image: linear-gradient(rgba(83, 82, 82, 0.5), rgba(236, 229, 229, 0.5)), url("https://images.unsplash.com/photo-1469533778471-92a68acc3633?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8ODR8NDkzMjU5fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
-
-/* Set a specific height */
 height: 50%;
 
 /* Position and center the image to scale nicely on all screens */
