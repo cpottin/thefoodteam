@@ -1,5 +1,4 @@
 
-
 export function fetchJson(apiUrl) {
     return new Promise((resolve, reject) => {
         fetch(apiUrl)

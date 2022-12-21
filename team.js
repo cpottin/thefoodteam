@@ -24,7 +24,11 @@ export function getTeamInfo() {
         />
         <div class="card-body">
           <h5 class="card-title">David Rodrigues</h5>
-          <p class="card-text"></p>
+          <p class="card-text">
+          David is a software engineer and former Navy Electrician's Mate. 
+          Time he doesn't spend engrossed in Javascript documentation is usually spent in the Kitchen. 
+          Where he uses For The Love of food as his main reference.
+          </p>
         </div>
       </div>
       <div class="card">
@@ -38,7 +42,7 @@ export function getTeamInfo() {
           <p class="card-text">
           Shuofei is a software engineer and a national guard member. He loves to
           try different cuisines but is not good at cooking. He is going to get recipes on this website
-          to ger more practices, just like his coding skills - more practices needed.
+          to get more practice, just like his coding skills - more practice is needed.
           </p>
         </div>
       </div>`;
