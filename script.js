@@ -3,13 +3,12 @@ import { getLandingPageRecipes } from "./landing_page.js";
 import { getRestaurantsByLocation } from "./restaurantInfo.js";
 import { getTeamInfo } from "./team.js";
 import { getJoke } from "./landing_page.js";
+import { gotoRecipe } from "./recipes.js"
+import { handleError } from "./error.js";
 
-const DEFAULT_ERROR_MESSAGE =
-  "API call error: Please double check your url and make sure the server is up and running.";
 
 /*goelocation*/
 /* Get user's location if we can*/
-
 if (navigator.geolocation) {
   //ask user permission to use their location
   navigator.geolocation.getCurrentPosition(
@@ -22,6 +21,7 @@ if (navigator.geolocation) {
   }
 }
 
+// get and show weather details
 function getWeatherByLocation({ coords: { latitude: lat, longitude: lon } }) {
   const weatherAPIURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=56d9dbad82d913f3a47c8acc41ab00a3&units=imperial`;
 
@@ -31,7 +31,6 @@ function getWeatherByLocation({ coords: { latitude: lat, longitude: lon } }) {
       showWeather(json);
     });
 }
-
 function showWeather({ main: { temp }, weather: [weatherInfo] }) {
   const weatherInfoContainer = document.getElementById("weather_span");
 
@@ -44,10 +43,11 @@ function showWeather({ main: { temp }, weather: [weatherInfo] }) {
     </div>
     `;
 }
+
 //onload dynamically create 3 cards for the landing page
 window.addEventListener("load", getLandingPageRecipes);
 
-/*Function to get recipes with search from landing page*/
+/*Search for Recipes*/
 search_bar.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -56,21 +56,7 @@ search_bar.addEventListener("submit", (event) => {
   search_form.reset();
 });
 
-function handleError(msg = DEFAULT_ERROR_MESSAGE) {
-  const alert_container = document.createElement("div");
-  alert_container.className = "alert alert-warning alert-dismissible fade show";
-  alert_container.setAttribute("role", "alert");
-
-  alert_container.innerHTML = `
-        <strong>${msg}</strong>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        </button>
-        `;
-  document.body.prepend(alert_container);
-}
-
-/*Function to get restaurants with Search Local Restaurants on landing page*/
-
+// Searches for nearby Restaurants
 search_local_restaurants.addEventListener("click", (event) => {
   event.preventDefault();
 
@@ -84,15 +70,19 @@ search_local_restaurants.addEventListener("click", (event) => {
   }
 });
 
-/*Function to get team info with About the Team on landing page*/
-
+/*get team info with About the Team on landing page*/
 about_the_team.addEventListener("click", (event) => {
   event.preventDefault();
   getTeamInfo();
 });
 
-/*Funntion to get Random Joke and prepend it to the landing page*/
+/*get Random Joke and prepend it to the landing page*/
 random_joke.addEventListener("click", (event) => {
   event.preventDefault();
   getJoke();
 });
+
+
+// GoTo full Recipes  works for both landing results and search results
+document.body.addEventListener("click", gotoRecipe);
+
