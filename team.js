@@ -40,8 +40,8 @@ export function getTeamInfo() {
         <div class="card-body">
           <h5 class="card-title">Shuofei Wu</h5>
           <p class="card-text">
-          Shuofei is a software engineer and a national guard member. He loves to
-          try different cuisines but is not good at cooking. He is going to get recipes on this website
+          Shuofei is a software engineer and a guardsman. He loves to
+          try different cuisines but is not good at making them. He is going to get recipes on this website
           to get more practice, just like his coding skills - more practice is needed.
           </p>
         </div>

@@ -15,7 +15,7 @@ import { DEFAULT_IMAGE } from "./constants.js";
 // Load search result cards
 
 export function getRecipes(search) {
-  let apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${CINDY2_SPOON_KEY}&query=${search}&addRecipeInformation=true&instructionsRequired=true&number=6`;
+  let apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${SHUOFEIS_SPOON_KEY}&query=${search}&addRecipeInformation=true&instructionsRequired=true&number=6`;
 
   //let apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${CINDYS_SPPON_KEY}&query=${search}&addRecipeInformation=true&instructionsRequired=true&number=6`;
 
@@ -49,7 +49,7 @@ export function getRecipes(search) {
                         ? json.results[i].image
                         : DEFAULT_IMAGE
                     }"
-
+                    
                     alt="picture of ${json.results[i].title}"
 
                     />
@@ -102,7 +102,7 @@ export function gotoRecipe(event) {
 
   //get button by class with classlist
 
-  let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${CINDY2_SPOON_KEY}`;
+  let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${SHUOFEIS_SPOON_KEY}`;
 
   // let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${CINDYS_SPPON_KEY}`
 
@@ -118,13 +118,36 @@ export function gotoRecipe(event) {
     fetchJson(recipeUrl).then((json) => {
       //remove top image container
 
-      top_img_container.innerHTML = "";
+      if (!json.url) {
+        top_img_container.innerHTML = "";
 
-      // clear card deck
+        // clear card deck
 
-      card_deck.innerHTML = "";
+        card_deck.innerHTML = "";
 
-      card_deck.innerHTML = `
+        card_deck.innerHTML = `
+
+            <h2>This recipe card cannot be generated. Please try another recipe.</h2>
+  
+                    <div class="container-fluid">
+  
+                        <div class="row justify-content-center">
+  
+                        <img src="${DEFAULT_IMAGE}" >
+  
+                        </div>
+  
+                    </div>
+  
+                    `;
+      } else {
+        top_img_container.innerHTML = "";
+
+        // clear card deck
+
+        card_deck.innerHTML = "";
+
+        card_deck.innerHTML = `
 
                   <div class="container-fluid">
 
@@ -137,6 +160,7 @@ export function gotoRecipe(event) {
                   </div>
 
                   `;
+      }
     });
   }
 }

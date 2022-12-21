@@ -1,7 +1,6 @@
 import { DEFAULT_ERROR_MESSAGE } from "./constants.js";
 
 export function handleError(msg = DEFAULT_ERROR_MESSAGE) {
-  
   const alertContainer = document.createElement("div");
   alertContainer.className = "alert alert-warning alert-dismisible fade show";
   alertContainer.setAttribute("role", "alert");
