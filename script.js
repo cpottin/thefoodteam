@@ -2,10 +2,9 @@ import { getRecipes } from "./recipes.js";
 import { getLandingPageRecipes } from "./landing_page.js";
 import { getRestaurantsByLocation } from "./restaurantInfo.js";
 import { getTeamInfo } from "./team.js";
-import { getJoke} from "./landing_page.js";
-import { gotoRecipe } from "./recipes.js"
+import { getTrivia } from "./landing_page.js";
+import { gotoRecipe } from "./recipes.js";
 import { handleError } from "./error.js";
-
 
 /*goelocation*/
 /* Get user's location if we can*/
@@ -78,11 +77,11 @@ about_the_team.addEventListener("click", (event) => {
 });
 
 /*get Random Joke and prepend it to the landing page*/
-random_joke.addEventListener("click", (event) => {
+
+random_trivia.addEventListener("click", (event) => {
   event.preventDefault();
-  getJoke();
+  getTrivia();
 });
 
 // GoTo full Recipes  works for both landing results and search results
 document.body.addEventListener("click", gotoRecipe);
-
