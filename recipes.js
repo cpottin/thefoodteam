@@ -38,7 +38,7 @@ export function getRecipes(search) {
       for (let i = 0; i < json.results.length; i++) {
         card_deck.innerHTML += `
 
-                <div class="card">
+                <div class="card result">
 
                     <img
 
@@ -99,7 +99,12 @@ export function gotoRecipe(event) {
   //get ID from the button when the id is the id from the first call
   const recipeID = recipeBtn.id;
 
-  //let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${SHUOFEIS_SPOON_KEY}`;
+
+
+  //get button by class with classlist
+
+  let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${SHUOFEIS_SPOON_KEY}`;
+
 
   //let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${CINDYS_SPPON_KEY}`
 
@@ -149,6 +154,7 @@ export function gotoRecipe(event) {
                   <div class="container-fluid">
 
                       <div class="row justify-content-center">
+
 
                       <img src="${json.url}" width="700" height="900">
 

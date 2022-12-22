@@ -11,8 +11,9 @@ import { DEFAULT_IMAGE } from "./constants.js";
 export async function getLandingPageRecipes() {
   // const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${DAVIDS_SPOON_KEY}&number=3&tags=chocolate`;
 
-  //const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${SHUOFEIS2_SPOON_KEY}&number=3&tags=chocolate`;
-  const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${CINDYS_SPPON_KEY}&number=3&tags=chocolate`;
+  const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${SHUOFEIS2_SPOON_KEY}&number=3&tags=chocolate`;
+  //const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${CINDY2_SPOON_KEY}&number=3&tags=chocolate`;
+
   //const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${SHUOFEIS_SPOON_KEY}&number=3&tags=chocolate`;
   //const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${SHUOFEIS2_SPOON_KEY}&number=3&tags=chocolate`;
 
@@ -49,6 +50,7 @@ export async function getLandingPageRecipes() {
     });
 }
 
+
 // Display random food trivia
 export function getTrivia() {
   const triviaURL = `https://api.spoonacular.com/food/trivia/random?apiKey=${CINDYS_SPPON_KEY}`;
@@ -63,6 +65,7 @@ export function getTrivia() {
     </div>`;
     });
 }
+
 
 /* const triviaModal = document.createElement('div');
     triviaModal.classList.add("modal-dialog modal-dialog-centered modal-dialog-scrollable");
