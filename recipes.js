@@ -38,7 +38,7 @@ export function getRecipes(search) {
       for (let i = 0; i < json.results.length; i++) {
         card_deck.innerHTML += `
 
-                <div class="card">
+                <div class="card result">
 
                     <img
 
