@@ -32,7 +32,7 @@ body{
 
 #title_bar {
   background-image: linear-gradient(rgba(83, 82, 82, 0.5), rgba(236, 229, 229, 0.5)), url("https://images.unsplash.com/photo-1469533778471-92a68acc3633?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8ODR8NDkzMjU5fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
-  max-height: 200px;
+  max-height: 175px;
   min-width: 530px;
 
 /* Position and center the image to scale nicely on all screens */
@@ -69,7 +69,7 @@ body{
 }
 
 #weather_span{
-  height:200px;
+  height:175px;
   background-color: #669BB7;
   margin-left: 20px;
 }
