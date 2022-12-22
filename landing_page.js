@@ -10,8 +10,10 @@ import { DEFAULT_IMAGE } from "./constants.js";
 // Loads random recipes on home page
 export async function getLandingPageRecipes() {
   // const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${DAVIDS_SPOON_KEY}&number=3&tags=chocolate`;
+
   const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${SHUOFEIS2_SPOON_KEY}&number=3&tags=chocolate`;
   //const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${CINDY2_SPOON_KEY}&number=3&tags=chocolate`;
+
   //const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${SHUOFEIS_SPOON_KEY}&number=3&tags=chocolate`;
   //const spoon_similar_recipes_URL = `https://api.spoonacular.com/recipes/random?apiKey=${SHUOFEIS2_SPOON_KEY}&number=3&tags=chocolate`;
 
@@ -51,7 +53,7 @@ export async function getLandingPageRecipes() {
 
 // Display random food trivia
 export function getTrivia() {
-  const triviaURL = `https://api.spoonacular.com/food/trivia/random?apiKey=${SHUOFEIS_SPOON_KEY}`;
+  const triviaURL = `https://api.spoonacular.com/food/trivia/random?apiKey=${CINDYS_SPPON_KEY}`;
   fetch(triviaURL)
     .then((res) => res.json())
     .then((json) => {

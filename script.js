@@ -44,7 +44,9 @@ function showWeather({ main: { temp }, weather: [weatherInfo] }) {
 }
 
 //onload dynamically create 3 cards for the landing page
+
 window.addEventListener("load", getLandingPageRecipes,);
+
 
 
 /*Search for Recipes*/
@@ -76,12 +78,13 @@ about_the_team.addEventListener("click", (event) => {
   getTeamInfo();
 });
 
-/*get Random Joke and prepend it to the landing page*/
+
+/*get Random Trivia and prepend it to the landing page*/
 
 random_trivia.addEventListener("click", (event) => {
   event.preventDefault();
   getTrivia();
 });
 
-// GoTo full Recipes  works for both landing results and search results
+// GoTo full Recipes Cards for both landing results and search results
 document.body.addEventListener("click", gotoRecipe);

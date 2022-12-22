@@ -15,7 +15,7 @@ import { DEFAULT_IMAGE } from "./constants.js";
 // Load search result cards
 
 export function getRecipes(search) {
-  let apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${SHUOFEIS_SPOON_KEY}&query=${search}&addRecipeInformation=true&instructionsRequired=true&number=6`;
+  //let apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${SHUOFEIS_SPOON_KEY}&query=${search}&addRecipeInformation=true&instructionsRequired=true&number=6`;
 
   //let apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${CINDYS_SPPON_KEY}&query=${search}&addRecipeInformation=true&instructionsRequired=true&number=6`;
 
@@ -23,7 +23,7 @@ export function getRecipes(search) {
 
   //let apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${SHUOFEIS2_SPOON_KEY}&query=${search}&addRecipeInformation=true&instructionsRequired=true&number=6`;
 
-  //let apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${DAVIDS_SPOON_KEY}&query=${search}&addRecipeInformation=true&instructionsRequired=true&number=6`;
+  let apiUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${DAVIDS_SPOON_KEY}&query=${search}&addRecipeInformation=true&instructionsRequired=true&number=6`;
 
   fetchJson(apiUrl)
     .then((json) => {
@@ -92,29 +92,30 @@ export function getRecipes(search) {
 // Displays full Recipe Card on button click
 
 export function gotoRecipe(event) {
-  //identified the evnet target
 
+  //identified the evnet target
   const recipeBtn = event.target;
 
   //get ID from the button when the id is the id from the first call
-
   const recipeID = recipeBtn.id;
+
 
 
   //get button by class with classlist
 
   let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${SHUOFEIS_SPOON_KEY}`;
 
-  // let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${CINDYS_SPPON_KEY}`
+
+  //let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${CINDYS_SPPON_KEY}`
 
   // let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${SHUOFEIS_SPOON_KEY}`
 
-  // let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${SHUOFEIS2_SPOON_KEY}`
+  //let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${SHUOFEIS2_SPOON_KEY}`
 
-  // let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${DAVIDS_SPOON_KEY}`
+  let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${CINDY2_SPOON_KEY}`
 
+  //get button by class with classlist
   if (recipeBtn.classList.contains("recipe_card_btn")) {
-    //need to add idValue to attributes?
 
     fetchJson(recipeUrl).then((json) => {
       //remove top image container
