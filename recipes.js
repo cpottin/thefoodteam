@@ -69,8 +69,8 @@ export function gotoRecipe(event) {
   const recipeID = recipeBtn.id;
     //get button by class with classlist
   // let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${CINDY2_SPOON_KEY}`
-  let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${CINDYS_SPPON_KEY}`
-  // let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${SHUOFEIS_SPOON_KEY}`
+  // let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${CINDYS_SPPON_KEY}&mask=potMask`
+  let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${SHUOFEIS_SPOON_KEY}`
   // let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${SHUOFEIS2_SPOON_KEY}`
   // let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${DAVIDS_SPOON_KEY}`
   
@@ -86,7 +86,7 @@ export function gotoRecipe(event) {
         card_deck.innerHTML = `
                   <div class="container-fluid">
                       <div class="row justify-content-center">
-                      <img src="${json.url}" width="700" height="900">
+                      <img src="${json.url}" width="700">
                       </div>
                   </div>
                   `;
