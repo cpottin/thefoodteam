@@ -89,6 +89,14 @@ body{
 
 }
 
+.circular-image{
+  position: relative; 
+  width: 200px; 
+  height: 200px; 
+  overflow: hidden; 
+  border-radius: 50%; } 
+  
+  .circular--image img { width: 100%; height: auto; }
 
 
 /* The food image */
