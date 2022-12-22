@@ -112,7 +112,7 @@ export function gotoRecipe(event) {
 
   //let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${SHUOFEIS2_SPOON_KEY}`
 
-  let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${CINDY2_SPOON_KEY}`
+  //let recipeUrl = `https://api.spoonacular.com/recipes/${recipeID}/card?apiKey=${CINDY2_SPOON_KEY}`
 
   //get button by class with classlist
   if (recipeBtn.classList.contains("recipe_card_btn")) {
