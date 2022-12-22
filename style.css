@@ -41,7 +41,7 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  position: relative sticky;
   width: 100vw;
   border-bottom-left-radius: 35px;
   border-bottom-right-radius: 35px;
@@ -76,6 +76,10 @@ body{
   
   background-color: #669BB7;
   margin-left: 20px;
+}
+
+#trivia_container{
+  background-color: #f1f3f4;
 }
 
 @media screen and (max-width: 656px) {

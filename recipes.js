@@ -68,7 +68,7 @@ export function getRecipes(search) {
 
                 <button type="button" id="${
                   json.results[i].id
-                }" class="btn btn-warning recipe_card_btn">
+                }" class="btn btn-info recipe_card_btn">
 
                 Go to Recipe Card
 

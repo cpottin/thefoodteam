@@ -49,15 +49,17 @@ export async function getLandingPageRecipes() {
     });
 }
 
-// Display random Joke
+// Display random food trivia
 export function getTrivia() {
   const triviaURL = `https://api.spoonacular.com/food/trivia/random?apiKey=${SHUOFEIS_SPOON_KEY}`;
   fetch(triviaURL)
     .then((res) => res.json())
     .then((json) => {
       top_img_container.innerHTML = "";
-      top_img_container.innerHTML = `<div>
-    <p>FOOD TRIVIA: ${json.text}</p>
+      top_img_container.innerHTML = `<div id="trivia_container" class="card text-center">
+      <div class="card-header">Food Trivia:</div>
+      <div class="card-body">
+        <p id="trivia-text" class="card-text">${json.text}</p>
     </div>`;
     });
 }
